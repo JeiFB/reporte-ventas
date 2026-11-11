@@ -61,7 +61,7 @@ public class Main {
             }
         } else {
             System.out.println();
-            System.out.println("Nota: define la variable de entorno DEEPSEEK_API_KEY para generar el");
+            System.out.println("Nota: define la variable de entorno OPENROUTER_API_KEY para generar el");
             System.out.println("reporte automaticamente. Sin ella, usa el prompt de " + rutaPrompt
                     + " en una IA de forma manual.");
         }

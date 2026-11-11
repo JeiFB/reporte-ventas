@@ -13,15 +13,17 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 
 /**
- * Consulta la API de DeepSeek para redactar el reporte ejecutivo.
- * La clave se lee de la variable de entorno DEEPSEEK_API_KEY: nunca se
- * escribe en el codigo ni se guarda en Git.
+ * Consulta la API de OpenRouter (compatible con OpenAI) para redactar el
+ * reporte ejecutivo con un modelo DeepSeek gratis. La clave se lee de la
+ * variable de entorno OPENROUTER_API_KEY: nunca se escribe en el codigo ni
+ * se guarda en Git.
  */
 public class ClienteIA {
 
-    private static final String URL = "https://api.deepseek.com/chat/completions";
-    private static final String MODELO = "deepseek-chat";
-    private static final String VARIABLE_KEY = "DEEPSEEK_API_KEY";
+    private static final String URL = "https://openrouter.ai/api/v1/chat/completions";
+    private static final String MODELO_POR_DEFECTO = "deepseek/deepseek-chat-v3.1:free";
+    private static final String VARIABLE_KEY = "OPENROUTER_API_KEY";
+    private static final String VARIABLE_MODELO = "OPENROUTER_MODEL";
 
     private final ObjectMapper mapper = new ObjectMapper();
 
@@ -36,8 +38,13 @@ public class ClienteIA {
             throw new IllegalStateException("No se encontro la variable de entorno " + VARIABLE_KEY);
         }
 
+        String modelo = System.getenv(VARIABLE_MODELO);
+        if (modelo == null || modelo.isBlank()) {
+            modelo = MODELO_POR_DEFECTO;
+        }
+
         ObjectNode cuerpo = mapper.createObjectNode();
-        cuerpo.put("model", MODELO);
+        cuerpo.put("model", modelo);
         ArrayNode mensajes = cuerpo.putArray("messages");
         ObjectNode mensaje = mensajes.addObject();
         mensaje.put("role", "user");
