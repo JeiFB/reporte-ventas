@@ -13,15 +13,15 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 
 /**
- * Consulta la API de OpenAI para redactar el reporte ejecutivo.
- * La clave se lee de la variable de entorno OPENAI_API_KEY: nunca se
+ * Consulta la API de DeepSeek para redactar el reporte ejecutivo.
+ * La clave se lee de la variable de entorno DEEPSEEK_API_KEY: nunca se
  * escribe en el codigo ni se guarda en Git.
  */
 public class ClienteIA {
 
-    private static final String URL = "https://api.openai.com/v1/chat/completions";
-    private static final String MODELO = "gpt-4o-mini";
-    private static final String VARIABLE_KEY = "OPENAI_API_KEY";
+    private static final String URL = "https://api.deepseek.com/chat/completions";
+    private static final String MODELO = "deepseek-chat";
+    private static final String VARIABLE_KEY = "DEEPSEEK_API_KEY";
 
     private final ObjectMapper mapper = new ObjectMapper();
 

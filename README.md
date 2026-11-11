@@ -64,7 +64,7 @@ La aplicacion imprime los indicadores, genera la grafica en
 |---|---|---|---|
 | Apache Commons CSV | Leer y procesar el archivo `ventas.csv` | Apache License 2.0 | Licencia permisiva: permite usar, modificar y distribuir el software (incluso en proyectos comerciales) con la unica condicion de conservar el aviso de copyright y licencia. No obliga a liberar el codigo propio. Totalmente compatible con un proyecto academico. |
 | XChart | Generar la grafica de ventas por producto | Apache License 2.0 | Misma licencia permisiva, sin clausulas copyleft. No impone restricciones sobre el codigo del proyecto. Compatible con uso academico. |
-| Jackson Databind | Construir y leer el JSON de la peticion a la API de IA | Apache License 2.0 | Permisiva, ampliamente usada. Compatible con uso academico. |
+| Jackson Databind | Construir y leer el JSON de la peticion a la API de DeepSeek | Apache License 2.0 | Permisiva, ampliamente usada. Compatible con uso academico. |
 
 > La herramienta de empaquetado `maven-shade-plugin` tambien usa Apache License 2.0.
 
@@ -81,17 +81,17 @@ codigo del proyecto.
 - La IA solo **interpreta y redacta** el reporte ejecutivo; no recalcula cifras.
 - El prompt generado queda en `salida/prompt_ia.txt` y la respuesta obtenida en
   `salida/respuesta_ia.txt`.
-- **No hay API keys en el codigo.** La integracion con la API de OpenAI lee la
-  clave de la variable de entorno `OPENAI_API_KEY`.
+- **No hay API keys en el codigo.** La integracion con la API de DeepSeek lee la
+  clave de la variable de entorno `DEEPSEEK_API_KEY`.
 
-### Generar la respuesta con la API de OpenAI (opcional)
+### Generar la respuesta con la API de DeepSeek (opcional)
 
-El programa puede llamar a la API de OpenAI para redactar el reporte ejecutivo.
+El programa puede llamar a la API de DeepSeek para redactar el reporte ejecutivo.
 La clave se entrega por variable de entorno (nunca se escribe en el codigo ni se
 sube a Git):
 
 ```
-export OPENAI_API_KEY="tu-clave"      # macOS / Linux
+export DEEPSEEK_API_KEY="tu-clave"    # macOS / Linux
 java -jar target/reporte-ventas.jar
 ```
 
