@@ -64,6 +64,7 @@ La aplicacion imprime los indicadores, genera la grafica en
 |---|---|---|---|
 | Apache Commons CSV | Leer y procesar el archivo `ventas.csv` | Apache License 2.0 | Licencia permisiva: permite usar, modificar y distribuir el software (incluso en proyectos comerciales) con la unica condicion de conservar el aviso de copyright y licencia. No obliga a liberar el codigo propio. Totalmente compatible con un proyecto academico. |
 | XChart | Generar la grafica de ventas por producto | Apache License 2.0 | Misma licencia permisiva, sin clausulas copyleft. No impone restricciones sobre el codigo del proyecto. Compatible con uso academico. |
+| Jackson Databind | Construir y leer el JSON de la peticion a la API de IA | Apache License 2.0 | Permisiva, ampliamente usada. Compatible con uso academico. |
 
 > La herramienta de empaquetado `maven-shade-plugin` tambien usa Apache License 2.0.
 
@@ -80,8 +81,24 @@ codigo del proyecto.
 - La IA solo **interpreta y redacta** el reporte ejecutivo; no recalcula cifras.
 - El prompt generado queda en `salida/prompt_ia.txt` y la respuesta obtenida en
   `salida/respuesta_ia.txt`.
-- No se usan API keys en el codigo. Si se usara una API de IA, las credenciales
-  se manejarian por variables de entorno.
+- **No hay API keys en el codigo.** La integracion con la API de OpenAI lee la
+  clave de la variable de entorno `OPENAI_API_KEY`.
+
+### Generar la respuesta con la API de OpenAI (opcional)
+
+El programa puede llamar a la API de OpenAI para redactar el reporte ejecutivo.
+La clave se entrega por variable de entorno (nunca se escribe en el codigo ni se
+sube a Git):
+
+```
+export OPENAI_API_KEY="tu-clave"      # macOS / Linux
+java -jar target/reporte-ventas.jar
+```
+
+Con la variable definida, la aplicacion envia el prompt a la API y guarda el
+reporte en `salida/respuesta_ia.txt`. Si la variable **no** esta definida, el
+programa funciona igual pero solo genera el prompt (`salida/prompt_ia.txt`) para
+usarlo manualmente en una IA.
 
 ## Preguntas de sustentacion
 

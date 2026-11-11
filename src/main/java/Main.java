@@ -1,5 +1,6 @@
 import modelo.Indicadores;
 import modelo.Venta;
+import reporte.ClienteIA;
 import reporte.GeneradorGrafica;
 import reporte.GeneradorResumenIA;
 import servicio.CalculadoraIndicadores;
@@ -45,5 +46,24 @@ public class Main {
         System.out.println();
         System.out.println("----- Resumen estructurado para la IA -----");
         System.out.println(generadorIA.construirResumen(indicadores));
+
+        ClienteIA clienteIA = new ClienteIA();
+        String rutaRespuesta = CARPETA_SALIDA + "/respuesta_ia.txt";
+        if (clienteIA.hayApiKey()) {
+            try {
+                String reporte = clienteIA.generarReporte(prompt);
+                Files.writeString(Path.of(rutaRespuesta), reporte);
+                System.out.println();
+                System.out.println("Reporte ejecutivo redactado por la IA en: " + rutaRespuesta);
+            } catch (Exception e) {
+                System.out.println();
+                System.out.println("No se pudo consultar la IA: " + e.getMessage());
+            }
+        } else {
+            System.out.println();
+            System.out.println("Nota: define la variable de entorno OPENAI_API_KEY para generar el");
+            System.out.println("reporte automaticamente. Sin ella, usa el prompt de " + rutaPrompt
+                    + " en una IA de forma manual.");
+        }
     }
 }
