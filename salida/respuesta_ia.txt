@@ -1,20 +1,5 @@
-REPORTE EJECUTIVO DE VENTAS (redactado por IA a partir del prompt generado)
+El reporte registra un valor total de ventas de $23,120,000 COP, con 46 unidades comercializadas y un valor promedio por registro de $2,312,000.00 COP, lo que indica un desempeño basado en transacciones de alto valor individual.
 
-Durante el periodo analizado la empresa registro ventas por un valor total de
-$23.120.000 COP, correspondientes a 46 unidades vendidas. El valor promedio por
-registro de venta fue de $2.312.000 COP, lo que indica que la operacion se apoya
-en transacciones de ticket alto y no en un volumen elevado de unidades. En
-terminos generales, el desempeno del periodo es solido y esta impulsado por
-productos de mayor valor unitario.
+El producto más importante es la Laptop, que concentró el mayor valor vendido con $14,000,000 COP, posicionándose como el principal generador de ingresos dentro del portafolio.
 
-El producto mas importante fue la Laptop, con $14.000.000 COP en valor vendido,
-siendo el principal generador de ingresos del periodo y concentrando la mayor
-parte de las ventas totales. El resto de productos (Monitor, Mouse y Teclado)
-complementan la oferta, pero aportan una proporcion considerablemente menor al
-total.
-
-Como recomendacion, se sugiere asegurar la disponibilidad y continuidad de
-inventario de la Laptop, por su peso dentro de los ingresos, y disenar acciones
-comerciales que impulsen los productos de menor aporte para equilibrar la
-dependencia frente a un solo producto. Esto permitiria sostener el valor total
-de ventas y reducir el riesgo asociado a la concentracion de ingresos.
+Se recomienda priorizar la disponibilidad de stock y las acciones comerciales de Laptops para proteger y potenciar su contribución al valor total de ventas.
