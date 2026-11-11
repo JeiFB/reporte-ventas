@@ -1,0 +1,7 @@
+Actua como analista de negocios. Con base en los siguientes indicadores ya calculados, redacta un reporte ejecutivo claro de maximo tres parrafos para la gerencia. No inventes cifras ni recalcules nada: usa solo estos datos. Explica el desempeno general, destaca el producto mas importante y sugiere una recomendacion breve.
+
+RESUMEN DE INDICADORES DE VENTAS
+- Valor total de ventas: $23,120,000 COP
+- Cantidad total vendida: 46 unidades
+- Producto con mayor valor vendido: Laptop ($14,000,000 COP)
+- Valor promedio por registro: $2,312,000.00 COP
