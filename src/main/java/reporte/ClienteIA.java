@@ -21,7 +21,7 @@ import java.time.Duration;
 public class ClienteIA {
 
     private static final String URL = "https://openrouter.ai/api/v1/chat/completions";
-    private static final String MODELO_POR_DEFECTO = "deepseek/deepseek-chat-v3.1:free";
+    private static final String MODELO_POR_DEFECTO = "deepseek/deepseek-chat-v3-0324:free";
     private static final String VARIABLE_KEY = "OPENROUTER_API_KEY";
     private static final String VARIABLE_MODELO = "OPENROUTER_MODEL";
 

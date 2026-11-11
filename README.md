@@ -96,8 +96,9 @@ export OPENROUTER_API_KEY="sk-or-..."     # macOS / Linux
 java -jar target/reporte-ventas.jar
 ```
 
-El modelo por defecto es `deepseek/deepseek-chat-v3.1:free`. Se puede cambiar sin
-recompilar con la variable opcional `OPENROUTER_MODEL`.
+El modelo por defecto es `deepseek/deepseek-chat-v3-0324:free`. Se puede cambiar
+sin recompilar con la variable opcional `OPENROUTER_MODEL` (los modelos gratis de
+OpenRouter cambian con el tiempo).
 
 Con la variable definida, la aplicacion envia el prompt a la API y guarda el
 reporte en `salida/respuesta_ia.txt`. Si la variable **no** esta definida, el
