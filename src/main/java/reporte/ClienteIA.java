@@ -14,14 +14,13 @@ import java.time.Duration;
 
 /**
  * Consulta la API de OpenRouter (compatible con OpenAI) para redactar el
- * reporte ejecutivo con un modelo DeepSeek gratis. La clave se lee de la
- * variable de entorno OPENROUTER_API_KEY: nunca se escribe en el codigo ni
- * se guarda en Git.
+ * reporte ejecutivo con un modelo gratis. La clave se lee de la variable de
+ * entorno OPENROUTER_API_KEY: nunca se escribe en el codigo ni se guarda en Git.
  */
 public class ClienteIA {
 
     private static final String URL = "https://openrouter.ai/api/v1/chat/completions";
-    private static final String MODELO_POR_DEFECTO = "deepseek/deepseek-chat-v3-0324:free";
+    private static final String MODELO_POR_DEFECTO = "google/gemma-4-26b-a4b-it:free";
     private static final String VARIABLE_KEY = "OPENROUTER_API_KEY";
     private static final String VARIABLE_MODELO = "OPENROUTER_MODEL";
 
