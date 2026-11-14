@@ -54,7 +54,10 @@ public class Main {
                 String reporte = clienteIA.generarReporte(prompt);
                 Files.writeString(Path.of(rutaRespuesta), reporte);
                 System.out.println();
-                System.out.println("Reporte ejecutivo redactado por la IA en: " + rutaRespuesta);
+                System.out.println("----- Reporte ejecutivo redactado por la IA -----");
+                System.out.println(reporte);
+                System.out.println();
+                System.out.println("(Tambien guardado en: " + rutaRespuesta + ")");
             } catch (Exception e) {
                 System.out.println();
                 System.out.println("No se pudo consultar la IA: " + e.getMessage());
